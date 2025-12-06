@@ -11,7 +11,8 @@ pub trait SolutionFactory {
 }
 
 /// Utility function to read input file for a given day
-pub fn read_input(inputs_dir : &str, day : u8) -> Vec<u8> {
-    let input_path = format!("{}/day{:02}.txt", inputs_dir, day);
+pub fn read_input(inputs_dir : &str, day : u8, special_file : Option<String>) -> Vec<u8> {
+    let file = special_file.unwrap_or(format!("day{:02}.txt", day));
+    let input_path = format!("{}/{:02}/{}", inputs_dir, day, file);
     std::fs::read(&input_path).expect(&format!("Failed to read input file: {}", input_path))
 }
