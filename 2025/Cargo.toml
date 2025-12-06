@@ -1,0 +1,13 @@
+[package]
+name = "advent2025"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libc = "0.2.177"
+
+[dev-dependencies]
+
+[[bin]]
+name = "advent2025"
+path = "src/main.rs"
