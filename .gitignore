@@ -1,3 +1,8 @@
+# Rust
+*.rs.bk
+target/
+**/Cargo.lock
+
 # Remove Advent Files
 inputs
 
