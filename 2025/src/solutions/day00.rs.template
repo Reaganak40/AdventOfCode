@@ -1,0 +1,25 @@
+use crate::solution_traits::{Solution, SolutionFactory, read_input};
+
+pub struct Day0 {
+
+}
+
+impl Solution for Day0 {
+    fn part1(&mut self) -> String {
+        String::from("")
+    }
+
+    fn part2(&mut self) -> String {
+        String::from("")
+    }
+}
+
+impl SolutionFactory for Day0 {
+    fn init(inputs_dir : &str, day : u8) -> Box<dyn Solution> {
+        let _debug_file = Some(String::from("sample.txt"));
+        let input_bytes = read_input(inputs_dir, day, None);
+        let input = String::from_utf8_lossy(&input_bytes).to_string();
+
+        Box::new(Day0 {})
+    }
+}
