@@ -6,6 +6,7 @@ mod day03;
 mod day04;
 mod day05;
 mod day06;
+mod day07;
 
 /// Factory function to get solution for a given day
 pub fn get_solution_for_day(inputs_dir: &str, day: u8) -> Option<Box<dyn Solution>> {
@@ -16,6 +17,7 @@ pub fn get_solution_for_day(inputs_dir: &str, day: u8) -> Option<Box<dyn Solutio
         4 => Some(day04::Day4::init(inputs_dir, day)),
         5 => Some(day05::Day5::init(inputs_dir, day)),
         6 => Some(day06::Day6::init(inputs_dir, day)),
+        7 => Some(day07::Day7::init(inputs_dir, day)),
         _ => None,
     }
 }
